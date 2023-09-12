@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # for cron jobs
 CRONJOBS = [
-    ('*/1 * * * *', 'employee.cron.cron_fun', '>> /tmp/django_cron_job.log 2>&1')
+    ('0 9 * * *', 'employee.cron.cron_fun', '>> /tmp/django_cron_job.log 2>&1')
 ]
 
 # email settings
@@ -145,3 +145,4 @@ EMAIL_HOST = 'smtp.gmail.com'  # company mail server
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pts.coep@gmail.com'  # default account 
 EMAIL_HOST_PASSWORD = 'njgdohfimllmnsgg' # default account password
+
